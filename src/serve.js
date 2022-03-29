@@ -4,8 +4,11 @@ const path = require('path')
 const db = require('./database')
 const routes = require('./routes')
 
-
 const app = express()
+
+
+
+app.use(express.urlencoded({extended: true}))
 
 //Conexao com o banco de dados
 db.connect()
